@@ -5,6 +5,8 @@ export default {
     inventory: '在庫',
     orders: '注文',
     finance: '財務',
+    reports: 'レポート',
+    restocking: '補充発注',
     demandForecast: '需要予測',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
@@ -101,8 +103,40 @@ export default {
     }
   },
 
+  restocking: {
+    title: '補充発注',
+    subtitle: '予算内で需要ギャップの大きい順に補充発注を計画します',
+    budgetLabel: '補充予算',
+    plannedSpend: '計画支出額',
+    remainingBudget: '残り予算',
+    itemsCount: '発注品目数',
+    longestLeadTime: '最長リードタイム',
+    days: '{days}日',
+    recommendations: '推奨品目',
+    table: {
+      sku: 'SKU',
+      product: '製品',
+      trend: 'トレンド',
+      quantity: '数量',
+      unitCost: '単価',
+      lineCost: '小計',
+      supplier: '仕入先',
+      leadTime: 'リードタイム'
+    },
+    empty: '現在の予算に収まる品目はありません。予算を増やすと推奨が表示されます。',
+    placeOrder: '発注する',
+    placing: '発注中...',
+    success: '注文 {orderNumber} を送信しました。リードタイム: {days}日。配達予定日: {date}。',
+    viewOrders: '注文を表示',
+    loadError: '推奨の読み込みに失敗しました',
+    submitError: '発注に失敗しました'
+  },
+
   // Orders
   orders: {
+    submittedOrders: '送信済み注文',
+    noSubmittedOrders: '送信済みの注文はまだありません。',
+    days: '{days}日',
     title: '注文',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
@@ -124,6 +158,8 @@ export default {
       value: '価格',
       totalValue: '合計金額',
       status: 'ステータス',
+      leadTime: 'リードタイム',
+      totalCost: '合計コスト',
       expectedDelivery: '予定配達日',
       actualDelivery: '実際の配達日'
     }
@@ -245,6 +281,38 @@ export default {
     sanFrancisco: 'サンフランシスコ',
     london: 'ロンドン',
     tokyo: '東京'
+  },
+
+  // Reports
+  reports: {
+    title: 'パフォーマンスレポート',
+    description: '四半期の業績指標と月次トレンドを表示します',
+    quarterlyPerformance: '四半期パフォーマンス',
+    monthlyRevenueTrend: '月次売上トレンド',
+    monthOverMonth: '前月比分析',
+    quarterLabel: '{year}年第{quarter}四半期',
+    monthLabel: '{year}年{month}',
+    table: {
+      quarter: '四半期',
+      totalOrders: '総注文数',
+      totalRevenue: '総売上',
+      avgOrderValue: '平均注文額',
+      fulfillmentRate: '出荷達成率',
+      month: '月',
+      orders: '注文数',
+      revenue: '売上',
+      change: '増減額',
+      growthRate: '成長率'
+    },
+    stats: {
+      totalRevenue: '総売上',
+      avgMonthlyRevenue: '月平均売上',
+      totalOrders: '総注文数',
+      bestQuarter: '最高業績の四半期'
+    },
+    barLabel: '{month}: {revenue}',
+    notAvailable: '該当なし',
+    loadError: 'レポートの読み込みに失敗しました'
   },
 
   // Months
