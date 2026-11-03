@@ -5,6 +5,8 @@ export default {
     inventory: 'Inventory',
     orders: 'Orders',
     finance: 'Finance',
+    reports: 'Reports',
+    restocking: 'Restocking',
     demandForecast: 'Demand Forecast',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
@@ -101,8 +103,40 @@ export default {
     }
   },
 
+  restocking: {
+    title: 'Restocking',
+    subtitle: 'Plan a restocking order within your budget, prioritized by demand gap',
+    budgetLabel: 'Restocking Budget',
+    plannedSpend: 'Planned Spend',
+    remainingBudget: 'Remaining Budget',
+    itemsCount: 'Items to Order',
+    longestLeadTime: 'Longest Lead Time',
+    days: '{days} days',
+    recommendations: 'Recommended Items',
+    table: {
+      sku: 'SKU',
+      product: 'Product',
+      trend: 'Trend',
+      quantity: 'Quantity',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      supplier: 'Supplier',
+      leadTime: 'Lead Time'
+    },
+    empty: 'No items fit within the current budget. Increase the budget to see recommendations.',
+    placeOrder: 'Place Order',
+    placing: 'Placing order...',
+    success: 'Order {orderNumber} submitted. Lead time: {days} days. Expected delivery: {date}.',
+    viewOrders: 'View in Orders',
+    loadError: 'Failed to load recommendations',
+    submitError: 'Failed to place order'
+  },
+
   // Orders
   orders: {
+    submittedOrders: 'Submitted Orders',
+    noSubmittedOrders: 'No submitted orders yet.',
+    days: '{days} days',
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
@@ -124,6 +158,8 @@ export default {
       value: 'Value',
       totalValue: 'Total Value',
       status: 'Status',
+      leadTime: 'Lead Time',
+      totalCost: 'Total Cost',
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
     }
@@ -245,6 +281,38 @@ export default {
     sanFrancisco: 'San Francisco',
     london: 'London',
     tokyo: 'Tokyo'
+  },
+
+  // Reports
+  reports: {
+    title: 'Performance Reports',
+    description: 'View quarterly performance metrics and monthly trends',
+    quarterlyPerformance: 'Quarterly Performance',
+    monthlyRevenueTrend: 'Monthly Revenue Trend',
+    monthOverMonth: 'Month-over-Month Analysis',
+    quarterLabel: 'Q{quarter} {year}',
+    monthLabel: '{month} {year}',
+    table: {
+      quarter: 'Quarter',
+      totalOrders: 'Total Orders',
+      totalRevenue: 'Total Revenue',
+      avgOrderValue: 'Avg Order Value',
+      fulfillmentRate: 'Fulfillment Rate',
+      month: 'Month',
+      orders: 'Orders',
+      revenue: 'Revenue',
+      change: 'Change',
+      growthRate: 'Growth Rate'
+    },
+    stats: {
+      totalRevenue: 'Total Revenue',
+      avgMonthlyRevenue: 'Avg Monthly Revenue',
+      totalOrders: 'Total Orders',
+      bestQuarter: 'Best Performing Quarter'
+    },
+    barLabel: '{month}: {revenue}',
+    notAvailable: 'N/A',
+    loadError: 'Failed to load reports'
   },
 
   // Months

@@ -11,7 +11,28 @@ from fastapi.testclient import TestClient
 server_path = Path(__file__).parent.parent.parent / "server"
 sys.path.insert(0, str(server_path))
 
+import main
 from main import app
+
+
+@pytest.fixture(autouse=True)
+def reset_submitted_orders():
+    """Clear in-memory submitted orders so tests stay independent."""
+    main.submitted_orders.clear()
+    yield
+    main.submitted_orders.clear()
+
+
+@pytest.fixture(autouse=True)
+def reset_tasks_and_purchase_orders():
+    """Reset in-memory tasks and purchase orders so tests stay independent."""
+    po_snapshot = list(main.purchase_orders)
+    main.tasks.clear()
+    main._next_task_id = 1
+    yield
+    main.tasks.clear()
+    main._next_task_id = 1
+    main.purchase_orders[:] = po_snapshot
 
 
 @pytest.fixture
